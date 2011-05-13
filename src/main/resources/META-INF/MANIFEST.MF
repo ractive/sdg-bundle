@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Export-Package: com.example.neo4j;version="0.0.1.BUILD-SNAPSHOT";uses:
+ ="com.example.neo4j.domain,org.springframework.beans.factory.annotati
+ on,org.springframework.data.graph.neo4j.repository,org.springframewor
+ k.stereotype,org.springframework.transaction.annotation",com.example.
+ neo4j.domain;version="0.0.1.BUILD-SNAPSHOT";uses:="org.aspectj.lang,o
+ rg.aspectj.runtime.internal,org.neo4j.graphdb,org.neo4j.graphdb.trave
+ rsal,org.springframework.data.graph.annotation,org.springframework.da
+ ta.graph.core,org.springframework.data.graph.neo4j.annotation,org.spr
+ ingframework.data.graph.neo4j.support.node",net.junisphere.eranger.ne
+ o4j.domain;version="0.0.1.BUILD-SNAPSHOT";uses:="org.junit,org.junit.
+ runner,org.springframework.beans.factory.annotation,org.springframewo
+ rk.test.context"
+Bundle-Vendor: example.com
+Bundle-Version: 0.0.1.BUILD-SNAPSHOT
+Tool: Bundlor 1.0.0.RELEASE
+Bundle-Name: neo4j.domain
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.example.neo4j.domain
+Import-Package: org.aspectj.lang;version="[1.6.0, 1.7.0)",org.aspectj.
+ lang.reflect;version="[1.6.0, 1.7.0)",org.aspectj.runtime.internal;ve
+ rsion="[1.6.0, 1.7.0)",org.aspectj.runtime.reflect;version="[1.6.0, 1
+ .7.0)",org.neo4j.graphdb,org.neo4j.graphdb.traversal,org.springframew
+ ork.beans.factory.annotation;version="[3.0, 3.1)",org.springframework
+ .beans.factory.aspectj;version="[3.0, 3.1)",org.springframework.conte
+ xt;version="[3.0, 3.1)",org.springframework.context.support;version="
+ [3.0, 3.1)",org.springframework.data.graph.annotation;version="[1.1.0
+ , 1.2.0)",org.springframework.data.graph.core;version="[1.1.0, 1.2.0)
+ ",org.springframework.data.graph.neo4j.annotation;version="[1.1.0, 1.
+ 2.0)",org.springframework.data.graph.neo4j.config;version="[1.1.0, 1.
+ 2.0)",org.springframework.data.graph.neo4j.repository;version="[1.1.0
+ , 1.2.0)",org.springframework.data.graph.neo4j.support;version="[1.1.
+ 0, 1.2.0)",org.springframework.data.graph.neo4j.support.node;version=
+ "[1.1.0, 1.2.0)",org.springframework.data.repository.support;version=
+ "[1.0.0, 1.2.0)",org.springframework.stereotype;version="[3.0, 3.1)",
+ org.springframework.transaction.annotation;version="[3.0, 3.1)",org.s
+ pringframework.transaction.aspectj;version="[3.0, 3.1)"
+
