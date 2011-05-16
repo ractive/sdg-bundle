@@ -114,9 +114,64 @@
 		</dependency>
 
 	</dependencies>
+	<repositories>
+<!-- 		SpringSource EBR repositories - *release* -->
+		<repository>
+			<id>spring-ebr</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle 
+ 		Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/release</url>
+		</repository>
+		<repository>
+			<id>spring-ebr-external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<id>spring-ebr-libraries-external</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Library
+		Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/release</url>
+		</repository>
+		<repository>
+			<id>spring-ebr-libraries</id>
+			<name>SpringSource Enterprise Bundle Repository - External Library
+	Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/external</url>
+		</repository>
 
 
-	<description>asdf</description>
+<!-- 		SpringSource EBR repositories - *milestone* -->
+		<repository>
+			<id>com.springsource.repository.bundle.milestone</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle
+Milestones</name>
+			<url>http://repository.springsource.com/maven/bundles/milestone</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.libraries.milestone</id>
+			<name>SpringSource Enterprise Bundle Repository - Milestone Library
+Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/milestone</url>
+		</repository>
+
+<!-- 		SpringSource EBR repositories - *snapshot* -->
+		<repository>
+			<id>com.springsource.repository.libraries.snapshot</id>
+			<name>SpringSource Enterprise Bundle Repository - Snapshot Library
+Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/snapshot</url>
+		</repository>
+
+		<repository>
+			<id>com.springsource.repository.bundles.snapshot</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Snapshot</name>
+			<url>http://repository.springsource.com/maven/bundles/snapshot</url>
+		</repository>
+
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
