@@ -1,0 +1,32 @@
+* Install Virgo
+
+* Copy all file from this folder to the repsitory/usr repository in virgo:
+  https://www.dropbox.com/link/17.u9x7yMvEr5?k=150d01183a1df2d069f5859234bea381 
+
+* Enable debug logging for the springframework in virgo by adding the following
+  to /path/to/virgo/config/serviceability.xml
+
+  <logger level="DEBUG" additivity="false" name="org.springframework">
+    <appender-ref ref="SIFTED_LOG_FILE" />
+    <appender-ref ref="LOG_FILE" />
+  </logger>
+
+* Run the class Neo4jDomain as a java application, which should work
+
+* Try to deploy the neo4j.domain bundle to virgo, which fails... 
+
+The problem:
+It seems as if CGLIB can successfully enhance the Neo4jConfiguration class:
+ 
+[2011-07-08 15:52:07.742] DEBUG region-dm-6                  o.springframework.context.annotation.ConfigurationClassEnhancer   Successfully enhanced org.springframework.data.graph.neo4j.config.Neo4jConfiguration; enhanced class name is:
+org.springframework.data.graph.neo4j.config.Neo4jConfiguration$$EnhancerByCGLIB$$370f1989
+
+Later on it seems as if the .class file cannot be found (if this has anything to do with the following error):
+[2011-07-08 15:52:08.096] DEBUG region-dm-7                  o.springframework.core.LocalVariableTableParameterNameDiscoverer  Cannot find '.class' file for class [class org.springframework.data.graph.neo4j.config.Neo4jConfiguration$$EnhancerByCGLIB$$370f1989] - unable to determine constructors/methods parameter names
+
+The error itself: The ServiceRepository bean can in the end not be injected:
+[2011-07-08 15:52:08.302] DEBUG region-dm-7                  o.s.osgi.context.support.OsgiBundleXmlApplicationContext          Post refresh error org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serviceRepositoryImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.example.neo4j.ServiceRepository com.example.neo4j.ServiceRepositoryImpl.serviceRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.neo4j.ServiceRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+        at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
