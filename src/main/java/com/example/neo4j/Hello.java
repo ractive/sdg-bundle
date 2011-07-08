@@ -10,11 +10,6 @@ public class Hello {
     @Autowired
     private ServiceRepositoryImpl serviceRepository;
 
-    public Hello() {
-        System.out.println("###### c'tor HELLO! ######");
-
-    }
-
     public boolean init() {
         Service s = serviceRepository.create("top");
         System.out.println("Created service: " + s.getName());
