@@ -20,4 +20,5 @@ Import-Package:
  org.springframework.data.graph.neo4j.config;version="[1.1.0, 1.2.0)",
  org.springframework.data.repository.support;version="[1.0.0, 1.2.0)",
  org.springframework.transaction.aspectj;version="[3.0, 3.1)",
- org.springframework.beans.factory.aspectj;version="[3.0, 3.1)"
+ org.springframework.beans.factory.aspectj;version="[3.0, 3.1)",
+ org.springframework.data.repository.core.support;version="[1,2)"

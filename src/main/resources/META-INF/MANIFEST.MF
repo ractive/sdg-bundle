@@ -31,8 +31,9 @@ Import-Package: org.aspectj.lang;version="[1.6.0, 1.7.0)",org.aspectj.
  2.0)",org.springframework.data.graph.neo4j.repository;version="[1.1.0
  , 1.2.0)",org.springframework.data.graph.neo4j.support;version="[1.1.
  0, 1.2.0)",org.springframework.data.graph.neo4j.support.node;version=
- "[1.1.0, 1.2.0)",org.springframework.data.repository.support;version=
- "[1.0.0, 1.2.0)",org.springframework.stereotype;version="[3.0, 3.1)",
- org.springframework.transaction.annotation;version="[3.0, 3.1)",org.s
- pringframework.transaction.aspectj;version="[3.0, 3.1)"
+ "[1.1.0, 1.2.0)",org.springframework.data.repository.core.support;ver
+ sion="[1,2)",org.springframework.data.repository.support;version="[1.
+ 0.0, 1.2.0)",org.springframework.stereotype;version="[3.0, 3.1)",org.
+ springframework.transaction.annotation;version="[3.0, 3.1)",org.sprin
+ gframework.transaction.aspectj;version="[3.0, 3.1)"
 
